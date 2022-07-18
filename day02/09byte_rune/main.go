@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-//traveralString()
+traveralString()
 fixString("123abc")
 countChineseCharactersNumber("123abc我爱中国")
 
