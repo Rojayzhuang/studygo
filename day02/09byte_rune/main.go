@@ -13,7 +13,7 @@ countChineseCharactersNumber("123abc我爱中国")
 
 }
 
-
+//便利输出字符串
 func traveralString(){
 	str := "hello庄"
 	for i := 0; i <len(str); i++ {
