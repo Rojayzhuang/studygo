@@ -76,4 +76,31 @@ func main() {
 
 	b2[0] = 100         //b2 = [100 1 2]
 	fmt.Println(b1, b2) //b1 = [0 1 2]
+
+	//习题：求数组[1,3,5,7,8]所有元素的和
+	workArray := [...]int{1, 3, 5, 7, 8}
+	sumArray := 0
+	for _, v := range workArray {
+		sumArray += v
+	}
+	fmt.Println(sumArray)
+
+	//习题：找出数组中和为指定值的两个元素的下标，
+	//比如从数组[1, 3, 5, 7, 8]中找出和为8的两个元素的下标分别为(0,3)和(1,2)。
+
+	sumArrayValue(workArray[:], 8)
+}
+
+//习题：找出数组中和为指定值的两个元素的下标，
+//比如从数组[1, 3, 5, 7, 8]中找出和为8的两个元素的下标分别为(0,3)和(1,2)。
+func sumArrayValue(array []int, sumValue int) {
+	for i := 0; i < len(array); i++ {
+		for c := len(array) - 1; c >= 0; c-- {
+			if array[i]+array[c] == sumValue {
+				fmt.Printf("(%d,%d)", i, c)
+			} else if i == c {
+				break
+			}
+		}
+	}
 }
