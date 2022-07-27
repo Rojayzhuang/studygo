@@ -39,4 +39,5 @@ func main() {
 	//从切片中再切片
 	slice8 := slice7[1:3]
 	fmt.Println(slice8)
+
 }
