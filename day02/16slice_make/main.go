@@ -9,4 +9,12 @@ func main() {
 
 	slice2 := make([]int, 0, 10)
 	fmt.Printf("slice2= %v，长度：%v, 容量：%v\n", slice2, len(slice2), cap(slice2))
+
+	//切片的复制
+	slice3 := []int{1, 3, 5}
+	slice4 := slice3
+	fmt.Println(slice4)
+	slice3[0] = 100
+	fmt.Println(slice3)
+	fmt.Println(slice4)
 }
