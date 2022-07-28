@@ -12,9 +12,20 @@ func main() {
 
 	//切片的复制
 	slice3 := []int{1, 3, 5}
-	slice4 := slice3
+	slice4 := slice3 //slice3和slice4都指向了同一个底层数组
 	fmt.Println(slice4)
 	slice3[0] = 100
 	fmt.Println(slice3)
 	fmt.Println(slice4)
+
+	//切片的遍历
+	//索引遍历
+	for i := 0; i < len(slice3); i++ {
+		fmt.Println(slice3[i])
+	}
+	//for range循环
+	for i, v := range slice3 {
+		fmt.Println(i, v)
+	}
+	
 }
